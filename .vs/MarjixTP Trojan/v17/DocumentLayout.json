@@ -10,7 +10,7 @@
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|MarjixTP Trojan||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
               "RelativeDocumentMoniker": "MarjixTP Trojan\\MainClass.cs",
               "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MainClass.cs",
               "RelativeToolTip": "MarjixTP Trojan\\MainClass.cs",
-              "ViewState": "AgIAACUDAAAAAAAAAAAAACkDAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACUDAAAAAAAAAAAAADADAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T01:12:44.013Z",
               "EditorCaption": ""
