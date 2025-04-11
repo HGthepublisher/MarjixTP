@@ -1,4 +1,4 @@
-# MarjixTP
+# ![MTP Banner](marjtpbanner.png)
 
 # IMPORTANT
 This program will NOT damage any computer!!! Anyone who claims that it destroyed their computer, must have either lied about it happening or got the software on a different source!!!
