@@ -1,0 +1,7 @@
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Debug\MarjixTP.exe.config
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Debug\MarjixTP.exe
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Debug\MarjixTP.pdb
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Debug\MarjixTP Trojan.csproj.AssemblyReference.cache
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Debug\MarjixTP Trojan.csproj.CoreCompileInputs.cache
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Debug\MarjixTP.exe
+D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Debug\MarjixTP.pdb

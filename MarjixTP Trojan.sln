@@ -1,37 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.35906.104
+VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MarjixTP Trojan", "MarjixTP Trojan\MarjixTP Trojan.vcxproj", "{64C70746-837F-4126-A1F6-85962BFFD141}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarjixTP Trojan", "MarjixTP Trojan\MarjixTP Trojan.csproj", "{70832503-7E59-4BA4-9A24-8902F454D9AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		MarjixTP Main|x64 = MarjixTP Main|x64
-		MarjixTP Main|x86 = MarjixTP Main|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Debug|x64.ActiveCfg = Debug|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Debug|x64.Build.0 = Debug|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Debug|x86.ActiveCfg = Debug|Win32
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Debug|x86.Build.0 = Debug|Win32
-		{64C70746-837F-4126-A1F6-85962BFFD141}.MarjixTP Main|x64.ActiveCfg = MarjixTP Main|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.MarjixTP Main|x64.Build.0 = MarjixTP Main|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.MarjixTP Main|x86.ActiveCfg = MarjixTP Main|Win32
-		{64C70746-837F-4126-A1F6-85962BFFD141}.MarjixTP Main|x86.Build.0 = MarjixTP Main|Win32
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Release|x64.ActiveCfg = Release|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Release|x64.Build.0 = Release|x64
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Release|x86.ActiveCfg = Release|Win32
-		{64C70746-837F-4126-A1F6-85962BFFD141}.Release|x86.Build.0 = Release|Win32
+		{70832503-7E59-4BA4-9A24-8902F454D9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70832503-7E59-4BA4-9A24-8902F454D9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70832503-7E59-4BA4-9A24-8902F454D9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70832503-7E59-4BA4-9A24-8902F454D9AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B7AD1FBA-1AA7-49CE-AEB8-7F010667DB93}
+		SolutionGuid = {3F790BC8-8FA4-461C-9EE6-17AFF93A710F}
 	EndGlobalSection
 EndGlobal

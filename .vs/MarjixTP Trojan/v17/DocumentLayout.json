@@ -1,12 +1,55 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Marbl\\source\\repos\\MarjixTP Trojan\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|MarjixTP Trojan||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MarjixTP Trojan",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MarjixTP Trojan.csproj",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\MarjixTP Trojan.csproj",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MarjixTP Trojan.csproj",
+              "RelativeToolTip": "MarjixTP Trojan\\MarjixTP Trojan.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-10T01:46:04.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainClass.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MainClass.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\MainClass.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MainClass.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\MainClass.cs",
+              "ViewState": "AgIAACUDAAAAAAAAAAAAACkDAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:12:44.013Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
