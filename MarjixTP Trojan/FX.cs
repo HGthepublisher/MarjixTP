@@ -19,7 +19,7 @@ namespace MarjixTP_Trojan
 {
     public static class FX
     {
-        private static int currentMode = 5;
+        private static int currentMode = 0;
         private static bool ending = false;
         private static int time = 30;
         private static SoundPlayer soundP;
@@ -350,7 +350,7 @@ namespace MarjixTP_Trojan
                         IntPtr hBitmap = bmp.GetHbitmap();
                         IntPtr oldBmp = SelectObject(memDC, hBitmap);
                         int x1 = r.Next(0, x), y1 = r.Next(0, y), sx = bmp.Width * r.Next(0, x) / 5, sy = bmp.Height * r.Next(0, y) / 5;
-                        StretchBlt(screenDC, x1, y1, sx, sy, memDC, 0, 0, x, y, TernaryRasterOperations.SRCCOPY);
+                        StretchBlt(screenDC, x1, y1, sx, sy, memDC, 0, 0, x, y, TernaryRasterOperations.SRCPAINT);
                         SelectObject(memDC, oldBmp);
                         DeleteObject(hBitmap);
                         DeleteDC(memDC);
