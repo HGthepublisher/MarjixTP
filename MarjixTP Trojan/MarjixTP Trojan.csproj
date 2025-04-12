@@ -65,7 +65,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainClass.cs" />
+    <Compile Include="DLLImports.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="FX.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="marjtp.ico" />

@@ -14,40 +14,40 @@ using System.Configuration;
 
 namespace MarjixTP_Trojan
 {
-    public class MainClass
+    public static class DllImports
     {
         [DllImport("gdi32.dll")]
         static extern IntPtr CreatePen(PenStyle fnPenStyle, int nWidth, uint crColor);
         [DllImport("user32.dll", SetLastError = true)]
-        static extern IntPtr GetDC(IntPtr hWnd);
+        public static extern IntPtr GetDC(IntPtr hWnd);
         [DllImport("gdi32.dll", EntryPoint = "CreateCompatibleDC", SetLastError = true)]
-        static extern IntPtr CreateCompatibleDC(IntPtr hdc);
+        public static extern IntPtr CreateCompatibleDC(IntPtr hdc);
         [DllImport("gdi32.dll", EntryPoint = "SelectObject")]
         public static extern IntPtr SelectObject(IntPtr hdc, IntPtr hgdiobj);
         [DllImport("gdi32.dll")]
-        static extern bool MoveToEx(IntPtr hdc, int X, int Y, IntPtr lpPoint);
+        public static extern bool MoveToEx(IntPtr hdc, int X, int Y, IntPtr lpPoint);
         [DllImport("gdi32.dll", SetLastError = true)]
-        static extern bool MaskBlt(IntPtr hdcDest, int xDest, int yDest, int width, int height, IntPtr hdcSrc, int xSrc, int ySrc, IntPtr hbmMask, int xMask, int yMask, uint rop);
+        public static extern bool MaskBlt(IntPtr hdcDest, int xDest, int yDest, int width, int height, IntPtr hdcSrc, int xSrc, int ySrc, IntPtr hbmMask, int xMask, int yMask, uint rop);
         [DllImport("gdi32.dll")]
-        static extern bool LineTo(IntPtr hdc, int nXEnd, int nYEnd);
+        public static extern bool LineTo(IntPtr hdc, int nXEnd, int nYEnd);
         [DllImport("gdi32.dll", EntryPoint = "DeleteObject")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool DeleteObject(IntPtr hObject);
         [DllImport("gdi32.dll", EntryPoint = "BitBlt", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool BitBlt(IntPtr hdc, int nXDest, int nYDest, int nWidth, int nHeight, IntPtr hdcSrc, int nXSrc, int nYSrc, TernaryRasterOperations dwRop);
+        public static extern bool BitBlt(IntPtr hdc, int nXDest, int nYDest, int nWidth, int nHeight, IntPtr hdcSrc, int nXSrc, int nYSrc, TernaryRasterOperations dwRop);
         [DllImport("gdi32.dll")]
-        static extern bool StretchBlt(IntPtr hdcDest, int nXOriginDest, int nYOriginDest, int nWidthDest, int nHeightDest,
+        public static extern bool StretchBlt(IntPtr hdcDest, int nXOriginDest, int nYOriginDest, int nWidthDest, int nHeightDest,
         IntPtr hdcSrc, int nXOriginSrc, int nYOriginSrc, int nWidthSrc, int nHeightSrc,
         TernaryRasterOperations dwRop);
         [DllImport("gdi32.dll")]
-        static extern bool PlgBlt(IntPtr hdcDest, POINT[] lpPoint, IntPtr hdcSrc,
+        public static extern bool PlgBlt(IntPtr hdcDest, POINT[] lpPoint, IntPtr hdcSrc,
         int nXSrc, int nYSrc, int nWidth, int nHeight, IntPtr hbmMask, int xMask,
         int yMask);
         [DllImport("gdi32.dll")]
-        static extern bool PatBlt(IntPtr hdc, int nXLeft, int nYLeft, int nWidth, int nHeight, TernaryRasterOperations dwRop);
+        public static extern bool PatBlt(IntPtr hdc, int nXLeft, int nYLeft, int nWidth, int nHeight, TernaryRasterOperations dwRop);
         [DllImport("gdi32.dll", ExactSpelling = true, PreserveSig = true, SetLastError = true)]
-        static extern IntPtr Ellipse(IntPtr hdc, int nLeftRect, int nTopRect,
+        public static extern IntPtr Ellipse(IntPtr hdc, int nLeftRect, int nTopRect,
         int nRightRect, int nBottomRect);
         [DllImport("gdi32.dll", EntryPoint = "GdiAlphaBlend")]
         public static extern bool AlphaBlend(IntPtr hdcDest, int nXOriginDest, int nYOriginDest,
@@ -55,13 +55,13 @@ namespace MarjixTP_Trojan
         IntPtr hdcSrc, int nXOriginSrc, int nYOriginSrc, int nWidthSrc, int nHeightSrc,
         BLENDFUNCTION blendFunction);
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreateSolidBrush(uint crColor);
+        public static extern IntPtr CreateSolidBrush(uint crColor);
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreateBitmap(int nWidth, int nHeight, uint cPlanes, uint cBitsPerPel, IntPtr lpvBits);
+        public static extern IntPtr CreateBitmap(int nWidth, int nHeight, uint cPlanes, uint cBitsPerPel, IntPtr lpvBits);
         [DllImport("gdi32.dll", EntryPoint = "DeleteDC")]
         public static extern bool DeleteDC(IntPtr hdc);
         [DllImport("gdi32.dll")]
-        static extern bool FloodFill(IntPtr hdc, int nXStart, int nYStart, uint crFill);
+        public static extern bool FloodFill(IntPtr hdc, int nXStart, int nYStart, uint crFill);
         [DllImport("gdi32.dll", EntryPoint = "GdiGradientFill", ExactSpelling = true)]
         public static extern bool GradientFill(
         IntPtr hdc,           // handle to DC
@@ -72,62 +72,62 @@ namespace MarjixTP_Trojan
         GRADIENT_FILL dwMode);           // Use only GRADIENT_FILL.TRIANGLE. Both values GRADIENT_FILL.RECT_H and GRADIENT_FILL.RECT_V are wrong in this overload!
 
         [DllImport("user32.dll")]
-        static extern IntPtr GetDesktopWindow();
+        public static extern IntPtr GetDesktopWindow();
         [DllImport("user32.dll")]
-        static extern IntPtr GetWindowDC(IntPtr hwnd);
+        public static extern IntPtr GetWindowDC(IntPtr hwnd);
         [DllImport("user32.dll")]
-        static extern bool InvalidateRect(IntPtr hWnd, IntPtr lpRect, bool bErase);
+        public static extern bool InvalidateRect(IntPtr hWnd, IntPtr lpRect, bool bErase);
         [DllImport("User32.dll")]
-        static extern int ReleaseDC(IntPtr hwnd, IntPtr dc);
+        public static extern int ReleaseDC(IntPtr hwnd, IntPtr dc);
         [DllImport("gdi32.dll")]
-        static extern bool FillRgn(IntPtr hdc, IntPtr hrgn, IntPtr hbr);
+        public static extern bool FillRgn(IntPtr hdc, IntPtr hrgn, IntPtr hbr);
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreateRectRgn(int nLeftRect, int nTopRect, int nRightRect,
+        public static extern IntPtr CreateRectRgn(int nLeftRect, int nTopRect, int nRightRect,
         int nBottomRect);
         [DllImport("gdi32.dll")]
-        static extern bool Pie(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect,
+        public static extern bool Pie(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect,
         int nBottomRect, int nXRadial1, int nYRadial1, int nXRadial2, int nYRadial2);
         [DllImport("gdi32.dll", EntryPoint = "CreateCompatibleBitmap")]
-        static extern IntPtr CreateCompatibleBitmap(IntPtr hdc, int nWidth, int nHeight);
+        public static extern IntPtr CreateCompatibleBitmap(IntPtr hdc, int nWidth, int nHeight);
         [DllImport("gdi32.dll")]
-        static extern bool Rectangle(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
+        public static extern bool Rectangle(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
         [DllImport("gdi32.dll")]
-        static extern uint SetPixel(IntPtr hdc, int X, int Y, int crColor);
+        public static extern uint SetPixel(IntPtr hdc, int X, int Y, int crColor);
         [DllImport("gdi32.dll")]
-        static extern IntPtr GetPixel(IntPtr hdc, int nXPos, int nYPos);
+        public static extern IntPtr GetPixel(IntPtr hdc, int nXPos, int nYPos);
         [DllImport("gdi32.dll")]
-        static extern bool AngleArc(IntPtr hdc, int X, int Y, uint dwRadius,
+        public static extern bool AngleArc(IntPtr hdc, int X, int Y, uint dwRadius,
         float eStartAngle, float eSweepAngle);
         [DllImport("gdi32.dll")]
-        static extern bool RoundRect(IntPtr hdc, int nLeftRect, int nTopRect,
+        public static extern bool RoundRect(IntPtr hdc, int nLeftRect, int nTopRect,
         int nRightRect, int nBottomRect, int nWidth, int nHeight);
         [DllImport("gdi32.dll")]
-        static extern bool DeleteMetaFile(IntPtr hmf);
+        public static extern bool DeleteMetaFile(IntPtr hmf);
         [DllImport("gdi32.dll")]
-        static extern bool CancelDC(IntPtr hdc);
+        public static extern bool CancelDC(IntPtr hdc);
         [DllImport("gdi32.dll")]
-        static extern bool Polygon(IntPtr hdc, POINT[] lpPoints, int nCount);
+        public static extern bool Polygon(IntPtr hdc, POINT[] lpPoints, int nCount);
         [DllImport("gdi32.dll")]
 
-        static extern int SetBitmapBits(IntPtr hbmp, int cBytes, RGBQUAD[] lpBits);
+        public static extern int SetBitmapBits(IntPtr hbmp, int cBytes, RGBQUAD[] lpBits);
         [DllImport("kernel32.dll", SetLastError = true)]
-        static extern bool Beep(uint dwFreq, uint dwDuration);
+        public static extern bool Beep(uint dwFreq, uint dwDuration);
 
         [DllImport("user32.dll")]
-        private static extern bool BlockInput(bool block);
+        public static extern bool BlockInput(bool block);
 
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        static extern IntPtr LoadImage(IntPtr hinst, string lpszName, uint uType,
+        public static extern IntPtr LoadImage(IntPtr hinst, string lpszName, uint uType,
         int cxDesired, int cyDesired, uint fuLoad);
 
         [DllImport("user32.dll", SetLastError = true)]
-        private static extern int DestroyIcon(IntPtr hIcon);
+        public static extern int DestroyIcon(IntPtr hIcon);
 
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        private static extern IntPtr LoadLibraryEx(IntPtr lpFileName, IntPtr hFile, LoadLibraryFlags dwFlags);
+        static extern IntPtr LoadLibraryEx(IntPtr lpFileName, IntPtr hFile, LoadLibraryFlags dwFlags);
 
         [DllImport("user32.dll")]
-        static extern IntPtr LoadBitmap(IntPtr hInstance, string lpBitmapName);
+        public static extern IntPtr LoadBitmap(IntPtr hInstance, string lpBitmapName);
 
         [DllImport("user32.dll")]
         static extern IntPtr BeginPaint(IntPtr hwnd, out PAINTSTRUCT lpPaint);
@@ -154,23 +154,46 @@ namespace MarjixTP_Trojan
         private extern static long GetBitmapBits([In] IntPtr hbmp, [In] int cbBuffer, RGBQUAD[] lpvBits);
 
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreateHatchBrush(int iHatch, uint Color);
+        public static extern IntPtr CreateHatchBrush(int iHatch, uint Color);
 
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreatePatternBrush(IntPtr hbmp);
+        public static extern IntPtr CreatePatternBrush(IntPtr hbmp);
 
         [DllImport("gdi32.dll")]
-        static extern IntPtr CreateDIBitmap(IntPtr hdc, [In] ref BITMAPINFOHEADER
+        public static extern IntPtr CreateDIBitmap(IntPtr hdc, [In] ref BITMAPINFOHEADER
         lpbmih, uint fdwInit, byte[] lpbInit, [In] ref BITMAPINFO lpbmi,
         uint fuUsage);
 
         [DllImport("gdi32.dll")]
-        static extern int SetDIBitsToDevice(IntPtr hdc, int XDest, int YDest, uint
+        public static extern int SetDIBitsToDevice(IntPtr hdc, int XDest, int YDest, uint
         dwWidth, uint dwHeight, int XSrc, int YSrc, uint uStartScan, uint cScanLines,
         byte[] lpvBits, [In] ref BITMAPINFO lpbmi, uint fuColorUse);
 
         [DllImport("gdi32.dll")]
         static extern IntPtr SetDIBits(IntPtr hdc, IntPtr hbm, uint start, int line, int lpBits, [In] ref BITMAPINFO lpbmi, DIB_Color_Mode ColorUse);
+        
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SHFILEINFO
+        {
+            public IntPtr hIcon;
+            public int iIcon;
+            public uint dwAttributes;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 260)] public string szDisplayName;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 80)] public string szTypeName;
+        }
+
+        [DllImport("shell32.dll")]
+        public static extern IntPtr SHGetFileInfo(string pszPath, uint dwFileAttributes, ref SHFILEINFO psfi,
+            uint cbFileInfo, uint uFlags);
+
+        [DllImport("Shell32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr ExtractIcon(IntPtr hInst, string lpszExeFileName, int nIconIndex);
+
+        [DllImport("user32.dll")]
+        public static extern bool SetCursorPos(int X, int Y);
+
+        [DllImport("user32.dll")]
+        public static extern short GetAsyncKeyState(Keys vKey);
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public struct RAMP
@@ -642,263 +665,22 @@ namespace MarjixTP_Trojan
             public byte rgbReserved;
         }
 
-        public static SoundPlayer soundP;
-        public static void ByteBeat(int currentBeat, int freq, bool stop)
+        public static Icon ExtractIcon(string file, int number, bool largeIcon)
         {
-            if (stop)
+            IntPtr large;
+            IntPtr small;
+            ExtractIconEx(file, number, out large, out small, 1);
+            try
             {
-                if (soundP != null)
-                {
-                    soundP.Stop();
-                }
+                return Icon.FromHandle(largeIcon ? large : small);
             }
-            else
+            catch
             {
-                using (var stream = new MemoryStream())
-                {
-                    var writer = new BinaryWriter(stream);
-
-                    writer.Write("RIFF".ToCharArray());  // chunk id
-                    writer.Write((UInt32)0);             // chunk size
-                    writer.Write("WAVE".ToCharArray());  // format
-
-                    writer.Write("fmt ".ToCharArray());  // chunk id
-                    writer.Write((UInt32)16);            // chunk size
-                    writer.Write((UInt16)1);             // audio format
-
-                    var channels = 1;
-                    var sample_rate = freq;
-                    var bits_per_sample = 8;
-
-                    writer.Write((UInt16)channels);
-                    writer.Write((UInt32)sample_rate);
-                    writer.Write((UInt32)(sample_rate * channels * bits_per_sample / 8)); // byte rate
-                    writer.Write((UInt16)(channels * bits_per_sample / 8));               // block align
-                    writer.Write((UInt16)bits_per_sample);
-
-                    writer.Write("data".ToCharArray());
-
-                    var seconds = 30;
-
-                    var data = new byte[sample_rate * seconds];
-
-                    switch (currentBeat)
-                    {
-                        case 0:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)((byte)((t & t * 5 | t >> 6 | ((t & 0xFFFF) > 0x8000 ? (-6 * t) / 7 : ((t & 0x1FFFF) > 0x10000 ? -9 * t & 100 : (-9 * (t & 100))) / 11)) * 10));
-                            break;
-                        case 1:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)(t * (((t & 4096) != 0 ? t % 65536 < 59392 ? 7 : t & 7 : 16) + (1 & t >> 14)) >> (3 & -t >> ((t & 2048) != 0 ? 2 : 10)));
-                            break;
-                        case 2:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)(t / 8 >> (t >> 9) * t / ((t >> 14 & 3) + 4));
-                            break;
-                        case 3:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)(((10 * (t >> 6 | t | t >> (t >> 16 & 3)) + (7 & t >> 11)) % 256 * ((t & 3072) != 0 ? (2048 + t % 4096) % 3072 / 12 : 0) >> 8) + ((t & 3072) != 0 ? 0 : (t % 256 * (1024 - t % 1024) / 3 >> 6 & 128) >> (t >> 8 & 15)));
-                            break;
-                        case 4:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)(t + (t & t ^ t >> 6) - t * (t >> 9 & ((t % 16) != 0 ? 2 : 6) & t >> 9));
-                            break;
-                        case 5:
-                            for (var t = 0; t < data.Length; t++)
-                                data[t] = (byte)(((((t * ((t & 16384) != 0 ? 7 : 5) * (3 - (3 & (t >> 9)) + (3 & (t >> (((-t >> 20) & 1) != 0 ? 8 : 11)))) >> (3 & (-t >> ((t & ((-t & 57344) != 0 ? 4096 : 6144)) != 0 ? 2 : 16)))) | (((-t & 24576) != 0) ? ((3 * t >> 5) % 192) : ((t >> 4) % 192)) | (((t >> 20) & 1) != 0 ? (t >> 4) : (t >> (((-t >> 18) & 1) + 2)))) & 255) >> 1) - ((((t >> 18) & 1) != 0) ? ((((-t >> 1) * ((t & 16384) != 0 ? 7 : 5)) >> ((-t >> 10) & 3) & (t >> 4 & 255)) >> 1) : (((-t >> 2) * ((t & 16384) != 0 ? 7 : 5)) >> ((-t >> 10) & 3) & ((t >> 4 & 255) >> 1))) + (128 & (int)(40000 / (1 + (t & (((-t & 28672) != 0) ? 4095 : 2047))))) + ((((t >> 18) & 3) != 0) ? -(((t * (t ^ (t % 9))) & 255 & -(Convert.ToInt32((t >> ((t >> 11) & 31)) != 0 ? ((-t & 14336) != 0 ? 5 : 4) - Convert.ToInt32((-t & 28672) == 0) - Convert.ToInt32((-t & 122880) == 0) : 6)) << 2 & 255) >> 2) + 128 : 0));
-                            break;
-                    }
-
-                    writer.Write((UInt32)(data.Length * channels * bits_per_sample / 8));
-
-                    foreach (var elt in data) writer.Write(elt);
-
-                    writer.Seek(4, SeekOrigin.Begin);                     // seek to header chunk size field
-                    writer.Write((UInt32)(writer.BaseStream.Length - 8)); // chunk size
-
-                    stream.Seek(0, SeekOrigin.Begin);
-
-                    soundP = new SoundPlayer(stream);
-                    soundP.Play();
-                }
+                return null;
             }
+
         }
-
-        public static void MTPEndPart()
-        {
-            MessageBox.Show("Alright, I'm done now. I must go, use your computer wisely. Peace out!!", "Thanks for using again!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public static int currentMode = 0;
-        public static bool ending = false;
-        public static int time = 25;
-        public static void ModeTypes()
-        {
-            while (!ending)
-            {
-                switch (currentMode)
-                {
-                    case 0:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    case 1:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    case 2:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    case 3:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    case 4:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    case 5:
-                        Thread.Sleep(time * 1000);
-                        currentMode += 1;
-                        break;
-                    default:
-                        ending = true;
-                        break;
-                }
-            }
-        }
-
-        public static void MTPMain()
-        {
-            Thread.Sleep(800);
-
-            Task.Run(ModeTypes);
-
-            int currentByteBeat = -1;
-
-            Task.Run(() =>
-            {
-                while (true)
-                {
-                    if (currentByteBeat != currentMode)
-                    {
-                        currentByteBeat = currentMode;
-                        ByteBeat(0, 0, true);
-                        switch (currentByteBeat)
-                        {
-                            case 0:
-                                ByteBeat(currentByteBeat, 8000, false);
-                                break;
-                            case 1:
-                                ByteBeat(currentByteBeat, 8000, false);
-                                break;
-                            case 2:
-                                ByteBeat(currentByteBeat, 8000, false);
-                                break;
-                            case 3:
-                                ByteBeat(currentByteBeat, 8000, false);
-                                break;
-                            case 4:
-                                ByteBeat(currentByteBeat, 8000, false);
-                                break;
-                            case 5:
-                                ByteBeat(currentByteBeat, 11025, false);
-                                break;
-                        }
-                    }
-                }
-            });
-
-            int x = 0, y = 0;
-            foreach (var screen in Screen.AllScreens)
-            {
-                x += screen.Bounds.Width;
-                y += screen.WorkingArea.Height;
-            }
-            Random r = new Random();
-            while (!ending)
-            {
-                IntPtr hdc = GetDC(IntPtr.Zero);
-                IntPtr Brush = CreateSolidBrush(0xFFFFFF);
-                switch (currentMode)
-                {
-                    case 0:
-                        SelectObject(hdc, Brush);
-                        PatBlt(hdc, 0, 0, x, y, TernaryRasterOperations.PATINVERT);
-                        BitBlt(hdc, 0, 0, x, y, hdc, r.Next(-10, 10), r.Next(-25, 25), TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(25);
-                        break;
-                    case 1:
-                        SelectObject(hdc, Brush);
-                        StretchBlt(hdc, 0, 0, x, y, hdc, 0, 0, x - 5, y + 5, TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(5);
-                        break;
-                    case 2:
-                        SelectObject(hdc, Brush);
-                        BitBlt(hdc, 0, 0, x, y, hdc, 0, -10, TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(1);
-                        break;
-                    case 3:
-                        SelectObject(hdc, Brush);
-                        BitBlt(hdc, 0, 0, x, y, hdc, 0, -10, TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(1);
-                        break;
-                    case 4:
-                        SelectObject(hdc, Brush);
-                        BitBlt(hdc, 0, 0, x, y, hdc, 0, -10, TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(1);
-                        break;
-                    case 5:
-                        SelectObject(hdc, Brush);
-                        BitBlt(hdc, 0, 0, x, y, hdc, 0, -10, TernaryRasterOperations.SRCCOPY);
-                        DeleteObject(Brush);
-                        DeleteDC(hdc);
-                        Thread.Sleep(1);
-                        break;
-                }
-            }
-            ByteBeat(0, 0, true);
-
-            Thread.Sleep(800);
-
-            MTPEndPart();
-        }
-
-        public static void Main()
-        {
-            WindowsPrincipal winPrin = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-            bool isAdmin = winPrin.IsInRole(WindowsBuiltInRole.Administrator);
-            if (isAdmin)
-            {
-                MessageBox.Show("Why'd you run this as admin? I don't feel like destroying your computer. Instead, run this normally. (Without admin!)", "Hold on.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            else
-            {
-                MessageBox.Show("If you got this virus on any other platform but the official Github site from HGThePublisher, this might be a real destructive virus!!! More info is on the Github repository.", "HEADS UP!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult message1 = MessageBox.Show("Hi, I've seen that you're currently running something I, HGThePublisher, has created. If you want to continue, click yes. This isn't a real virus and won't do anything but play funky sounds and make cool visuals.", "Until you run...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (message1 == DialogResult.Yes)
-                {
-                    MessageBox.Show("Alright, well, lets get started!! (Click OK to continue.) Thanks for using!!", "Let's go!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    MTPMain();
-                }
-                else
-                {
-                    MessageBox.Show("I'm quitting then, you do you. Come back anytime if you want!", "Bye bye!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
+        [DllImport("Shell32.dll", EntryPoint = "ExtractIconExW", CharSet = CharSet.Unicode, ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
+        public static extern int ExtractIconEx(string sFile, int iIndex, out IntPtr piLargeVersion, out IntPtr piSmallVersion, int amountIcons);
     }
 }
