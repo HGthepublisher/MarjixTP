@@ -6,7 +6,7 @@ This application requires .NET 4.7.2.
 This is usable in your main computer but you can use it in a VM too!
 
 # What is this?
-MarjixTP is a safe Windows GDI virus made for the fun of it.
+MarjixTP is a open source safe Windows GDI virus made for the fun of it.
 Made to replicate any other GDI Trojan Horse. (Monoxide, SalineWin, InfiniteBlue, ect.)
 
 # How can I trust it's not a real virus?
@@ -17,4 +17,6 @@ This program has over 10 different visuals and audios!
 Some can change screen color, move the screen, and more!
 
 # Credits :
-I give credit to the person who created the bytebeat player, the people who created the bytebeats used, and the person who made a tutorial on how to make a GDI program.
+I'm giving mostly credits to [Cyber Soldier](https://www.youtube.com/watch?v=qnngjSVvpzM) for help one most of the program and [dharmatech](https://gist.github.com/dharmatech/6cb8fb83e46d56a1cc37f32e42559714) for the bytebeat stuff.
+
+## This is my first Trojan, expect weird things going on in the code, I've never did C# other than unity.
