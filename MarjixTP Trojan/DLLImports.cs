@@ -171,7 +171,10 @@ namespace MarjixTP_Trojan
 
         [DllImport("gdi32.dll")]
         static extern IntPtr SetDIBits(IntPtr hdc, IntPtr hbm, uint start, int line, int lpBits, [In] ref BITMAPINFO lpbmi, DIB_Color_Mode ColorUse);
-        
+
+        [DllImport("gdi32.dll")]
+        public static extern bool PolyBezier(IntPtr hdc, POINT[] lppt, uint cPoints);
+
         [StructLayout(LayoutKind.Sequential)]
         public struct SHFILEINFO
         {
