@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Media;
-using System.Linq.Expressions;
-using System.Diagnostics.Eventing.Reader;
-using System.Security.Principal;
 using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Configuration;
 
-namespace MarjixTP_Trojan
+namespace marjtp.DLLImports
 {
-    public static class DllImports
+    public static class MainClass
     {
         [DllImport("gdi32.dll")]
         static extern IntPtr CreatePen(PenStyle fnPenStyle, int nWidth, uint crColor);

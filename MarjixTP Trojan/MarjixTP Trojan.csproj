@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{70832503-7E59-4BA4-9A24-8902F454D9AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MarjixTP_Trojan</RootNamespace>
+    <RootNamespace>marjtp</RootNamespace>
     <AssemblyName>MarjixTP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -51,7 +51,7 @@
     <WarningLevel>5</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MarjixTP_Trojan.Startup</StartupObject>
+    <StartupObject>marjtp.Startup.MainClass</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>marjtp.ico</ApplicationIcon>
@@ -68,9 +68,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteBeatPlayer.cs" />
     <Compile Include="DLLImports.cs" />
+    <Compile Include="MouseMovement.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="FX.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="StoredItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="marjtp.ico" />
