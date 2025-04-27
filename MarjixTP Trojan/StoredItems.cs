@@ -15,7 +15,7 @@ namespace marjtp.Variables
 
     public class Variables
     {
-        public static int currentMode = 13;
+        public static int currentMode = 0;
         public static bool ending = false;
         public static int time = 24;
         public static int modeDelay = 1;
