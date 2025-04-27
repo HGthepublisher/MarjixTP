@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using static marjtp.DLLImports.MainClass;
 using static marjtp.Variables.Variables;
 using static marjtp.BB.Player;
+using static marjtp.Mouse.MouseMovement;
 
 namespace marjtp.Main
 {
@@ -20,10 +21,12 @@ namespace marjtp.Main
                 {
                     Thread.Sleep(time * 1000);
                     currentMode += 1;
+                    mouseEnabled = false;
                 }
                 else
                 {
                     ending = true;
+                    mouseEnabled = false;
                 }
             }
         }
@@ -44,6 +47,7 @@ namespace marjtp.Main
                     if (currentByteBeat != currentMode)
                     {
                         ByteBeat(true);
+                        mouseEnabled = false;
                         currentByteBeat = currentMode;
                         if (currentMode != updateMode1)
                         {
@@ -53,10 +57,12 @@ namespace marjtp.Main
                         if (currentMode <= 15)
                         {
                             ByteBeat(false);
+                            mouseEnabled = true;
                         }
                         else
                         {
                             ByteBeat(true);
+                            mouseEnabled = false;
                         }
                     }
                 }
@@ -66,7 +72,7 @@ namespace marjtp.Main
             {
                 while (currentMode <= 15)
                 {
-                    marjtp.Mouse.MouseMovement.EditMouse();
+                    EditMouse();
                     Thread.Sleep(1);
                 }
             });
@@ -101,6 +107,13 @@ namespace marjtp.Main
                 iconBytes[r.Next(iconBytes.Count)],
                 iconBytes[r.Next(iconBytes.Count)],
                 iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
+                iconBytes[r.Next(iconBytes.Count)],
             };
             IntPtr[] hBitmaps11 =
             {
@@ -128,7 +141,7 @@ namespace marjtp.Main
                             DeleteObject(Brush);
                             DeleteDC(hdc);
                             SetCursorPos(r.Next(x), r.Next(y));
-                            Thread.Sleep(5);
+                            Thread.Sleep(3);
                             break;
                         case 1:
                             SelectObject(hdc, Brush);
@@ -320,14 +333,21 @@ namespace marjtp.Main
                         case 12:
                             IntPtr brush12 = CreatePatternBrush(hBitmaps12[r.Next(hBitmaps12.Length)]);
                             SelectObject(hdc, brush12);
-                            PatBlt(hdc, 0, 0, x, y, TernaryRasterOperations.PATCOPY);
-                            Thread.Sleep(25);
+                            PatBlt(hdc, r.Next(-x, x), r.Next(-y, y), x, y, TernaryRasterOperations.PATCOPY);
+                            Thread.Sleep(2);
                             SelectObject(hdc, Brush);
-                            BitBlt(hdc, 0, 0, x, y, hdc, r.Next(-35, 35), r.Next(-20, 20), TernaryRasterOperations.SRCCOPY);
+                            if (r.Next(2) == 1)
+                            {
+                                BitBlt(hdc, 0, 0, x, y, hdc, r.Next(-35, 35), r.Next(-20, 20), TernaryRasterOperations.MERGECOPY);
+                            }
+                            else
+                            {
+                                BitBlt(hdc, 0, 0, x, y, hdc, 0, 0, TernaryRasterOperations.PATINVERT);
+                            }
                             DeleteDC(hdc);
                             DeleteObject(brush12);
                             DeleteObject(Brush);
-                            Thread.Sleep(25);
+                            Thread.Sleep(2);
                             break;
                         case 13:
                             SelectObject(hdc, Brush);

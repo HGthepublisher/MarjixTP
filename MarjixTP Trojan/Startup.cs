@@ -11,7 +11,7 @@ namespace marjtp.Startup
             bool isAdmin = winPrin.IsInRole(WindowsBuiltInRole.Administrator);
             if (isAdmin)
             {
-                MessageBox.Show("Why'd you run this as admin? I don't feel like destroying your computer. Instead, run this normally. (Without admin!)", "Hold on.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("What's the point in running this in administrator mode? Run normally.", "???", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             {

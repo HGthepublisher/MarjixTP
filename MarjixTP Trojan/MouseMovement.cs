@@ -7,9 +7,10 @@ namespace marjtp.Mouse
 {
     public class MouseMovement
     {
+        public static bool mouseEnabled = true;
         public static void EditMouse()
         {
-            if (currentMode == updateMode)
+            if (currentMode == updateMode & mouseEnabled)
             {
                 int mainMouseX = Cursor.Position.X, mainMouseY = Cursor.Position.Y;
                 int cursx14 = 0, cursy14 = 0;

@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\bytebeatplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\bytebeatplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\mousemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\mousemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\storeditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\storeditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|d:\\apps\\vs repositories\\marjixtp trojan\\marjixtp trojan\\dllimports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70832503-7E59-4BA4-9A24-8902F454D9AF}|MarjixTP Trojan\\MarjixTP Trojan.csproj|solutionrelative:marjixtp trojan\\dllimports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +34,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ByteBeatPlayer.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\ByteBeatPlayer.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\ByteBeatPlayer.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\ByteBeatPlayer.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\ByteBeatPlayer.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:40:33.718Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StoredItems.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\StoredItems.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\StoredItems.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\StoredItems.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\StoredItems.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:41:58.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\Startup.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\Startup.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\Startup.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:40:46.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DLLImports.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\DLLImports.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\DLLImports.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\DLLImports.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\DLLImports.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:40:41.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MouseMovement.cs",
+              "DocumentMoniker": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MouseMovement.cs",
+              "RelativeDocumentMoniker": "MarjixTP Trojan\\MouseMovement.cs",
+              "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\MouseMovement.cs",
+              "RelativeToolTip": "MarjixTP Trojan\\MouseMovement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:35:36.84Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +110,7 @@
               "RelativeDocumentMoniker": "MarjixTP Trojan\\Main.cs",
               "ToolTip": "D:\\Apps\\VS Repositories\\MarjixTP Trojan\\MarjixTP Trojan\\Main.cs",
               "RelativeToolTip": "MarjixTP Trojan\\Main.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAuwGgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-23T23:21:31.098Z",
               "EditorCaption": ""
