@@ -13,11 +13,13 @@ namespace marjtp.Main
 {
     public class MainClass
     {
+        private const int totalModesCount = 16;
+
         private static void ModeTypes()
         {
             while (!ending)
             {
-                if (currentMode <= 15)
+                if (currentMode <= totalModesCount)
                 {
                     Thread.Sleep(time * 1000);
                     currentMode += 1;
@@ -54,7 +56,7 @@ namespace marjtp.Main
                             updateMode1 = currentMode;
                             Thread.Sleep(modeDelay * 1000);
                         }
-                        if (currentMode <= 15)
+                        if (currentMode <= totalModesCount)
                         {
                             ByteBeat(false);
                             mouseEnabled = true;
@@ -70,7 +72,7 @@ namespace marjtp.Main
 
             Task.Run(() =>
             {
-                while (currentMode <= 15)
+                while (currentMode <= totalModesCount)
                 {
                     EditMouse();
                     Thread.Sleep(1);
@@ -385,6 +387,42 @@ namespace marjtp.Main
                             }
                             Thread.Sleep(5);
                             break;
+                        case 16: // Circular spinning effect
+                            var totalFramesForOneSpin = 100; // Takes maybe 20 seconds on my PC, adjust this to make it faster or slower
+                            var angleIncrement = 360.0 / totalFramesForOneSpin;
+
+                            // Calculate the center of the screen
+                            int centerX = x / 2; // Half of the screen width
+                            int centerY = y / 2; // Half of the screen height
+
+                            for (var currentFrame = 0; currentFrame < totalFramesForOneSpin; currentFrame++)
+                            {
+                                var currentFrameRotationAngle = currentFrame * angleIncrement * Math.PI / 180.0; // Convert to radians
+
+                                // Calculate rotation points relative to the center of the screen
+                                var rotationPoints = new POINT[3];
+
+                                // Center of the screen
+                                rotationPoints[0] = new POINT(centerX, centerY);
+
+                                // Top-right corner
+                                rotationPoints[1] = new POINT(
+                                    centerX + (int)(x * Math.Cos(currentFrameRotationAngle)),
+                                    centerY + (int)(x * Math.Sin(currentFrameRotationAngle))
+                                );
+
+                                // Bottom-left corner
+                                rotationPoints[2] = new POINT(
+                                    centerX + (int)(-y * Math.Sin(currentFrameRotationAngle)),
+                                    centerY + (int)(y * Math.Cos(currentFrameRotationAngle))
+                                );
+
+                                // Apply the transformation to the screen
+                                PlgBlt(hdc, rotationPoints, hdc, 0, 0, x, y, IntPtr.Zero, 0, 0);
+                            }
+                            break;
+
+
                     }
                 }
             }
