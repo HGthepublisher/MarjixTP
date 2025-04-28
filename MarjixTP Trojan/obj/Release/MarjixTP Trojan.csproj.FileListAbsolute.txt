@@ -1,7 +1,0 @@
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Release\MarjixTP.exe.config
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Release\MarjixTP.exe
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\bin\Release\MarjixTP.pdb
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Release\MarjixTP Trojan.csproj.AssemblyReference.cache
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Release\MarjixTP Trojan.csproj.CoreCompileInputs.cache
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Release\MarjixTP.exe
-D:\Apps\VS Repositories\MarjixTP Trojan\MarjixTP Trojan\obj\Release\MarjixTP.pdb
