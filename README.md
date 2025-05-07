@@ -18,5 +18,6 @@ Some can change screen color, move the screen, and more!
 
 # Credits :
 I'm giving mostly credits to [Cyber Soldier](https://www.youtube.com/watch?v=qnngjSVvpzM) for help one most of the program and [dharmatech](https://gist.github.com/dharmatech/6cb8fb83e46d56a1cc37f32e42559714) for the bytebeat stuff.
+All bytebeats can be found on [dollchan](https://dollchan.net/bytebeat/) and were modified for C# and for originality.
 
 ## This is my first Trojan, expect weird things going on in the code, I've never did C# other than unity.
