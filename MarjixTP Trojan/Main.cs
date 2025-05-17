@@ -140,12 +140,13 @@ namespace marjtp.Main
                             BitBlt(hdc, 0, 0, x, y, hdc, r.Next(-10, 10), r.Next(-25, 25), TernaryRasterOperations.SRCCOPY);
                             DeleteObject(Brush);
                             DeleteDC(hdc);
-                            SetCursorPos(r.Next(x), r.Next(y));
                             Thread.Sleep(3);
                             break;
                         case 1:
+                            int ss = r.Next(100, 400);
                             SelectObject(hdc, Brush);
-                            StretchBlt(hdc, 0, 0, x, y, hdc, 0, 0, x - 4, y + 3, TernaryRasterOperations.SRCCOPY);
+                            StretchBlt(hdc, 0, 0, x, y, hdc, 0, 0, x - 12, y + 8, TernaryRasterOperations.SRCCOPY);
+                            PatBlt(hdc, r.Next(x-ss), r.Next(y-ss), ss, ss, TernaryRasterOperations.PATINVERT);
                             DeleteObject(Brush);
                             DeleteDC(hdc);
                             Thread.Sleep(3);
